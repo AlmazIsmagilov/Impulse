@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset=utf-8">
+  <title>Импульс тела</title>
+ </head>
+ <body> 
+ <label>Введите массу тела<br>
+       <input id="cho" value="" placeholder="Масса" type="text">
+ </label>	   
+ <br></br>
+ <label>Введите скорость тела<br>
+       <input id="jep" value="" placeholder="Скорость" type="text">
+ </label>	   
+ <br></br>
+ <label>Нажми на кнопку<br>
+       <input id="pip" value="Вычислить" type="button" onClick="event.preventDefault(); Impulse()">
+</label><br></br>
+<div id="answer">
+    Ответ	   
+</div>	
+
+<script>
+
+    function Impulse() {
+      let m = document.getElementById("cho").value;
+      let v = document.getElementById("jep").value;
+      let p = m*v;		
+      document.getElementById("answer").innerHTML=p.toFixed(3);
+	}
+</script>
+  </body>
+</html>  
